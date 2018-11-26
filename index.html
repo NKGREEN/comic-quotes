@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Comics Cubby|Game:Cubby Quotes</title>
+		<meta name="description" content="A content navigation effect that reminds of jumping on a trampoline" />
+		<meta name="keywords" content="svg, animation, trampoline, effect, images, navigation" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/vicons-font.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link href="https://fonts.googleapis.com/css?family=Raleway|Spicy+Rice" rel="stylesheet">
+		<script src="js/snap.svg-min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body class="demo-1">
+		<div id="morph-shape" class="morph-shape" data-morph-next="M301,301c0,0-83.8-21-151-21C71.8,280-1,301-1,301s21-65.7,21-151C20,79.936-1-1-1-1s73,11,151,11c85,0,151-11,151-11
+	s-21,66.43-21,151C280,229.646,301,301,301,301z">
+			<svg width="100%" height="100%" viewBox="0 0 300 400" preserveAspectRatio="none">
+				<path d="M301,301c0,0-83.8,0-151,0c-78.2,0-151,0-151,0s0-65.7,0-151C-1,79.936-1-1-1-1s73,0,151,0c85,0,151,0,151,0s0,66.43,0,151
+C301,229.646,301,301,301,301z" />
+			</svg>
+		</div>
+		<div class="main">
+			<div class="container">
+				<header class="codrops-header">
+					<h1>Cubby Quotes!</h1>
+					<p class="info"><strong>To navigate, drag issues or click the button below.</strong></p>
+				</header>
+				<div class="stack">
+					<ul id="elasticstack" class="stack__images">
+						<li><img src="trampolineImages/MsMarvel.jpg" alt=""/></li>
+						<li><img src="trampolineImages/CaptainAmerica.jpg" alt=""/></li>
+						<li><img src="trampolineImages/SpiderMan.jpg" alt=""/></li>
+						<li><img src="trampolineImages/BlackPanther.jpg" alt=""/></li>
+						<li><img src="trampolineImages/StanLee.jpg" alt=""/></li>
+						<li><img src="trampolineImages/Groot.jpg" alt=""/></li>
+					</ul>
+					<div>
+						<br>
+						<br>
+						<br>
+						<br>
+					</div>
+					<button id="stack-next" class="stack__next"><i class="icon icon-down"></i><span>Next</span></button>
+					<ul id="stack-titles" class="stack__titles">
+						<li class="current">
+							<blockquote>
+								</p>"Good is not a thing you are. It’s a thing you do."</p>
+							  <footer><a href="">-Ms. Marvel</a> Data provided by Marvel. © 2014 Marvel</footer>
+							</blockquote>
+						</li>
+						<li>
+							<blockquote>
+							  <p>"This nation was founded on one principle above all else: 
+								  The requirement that we stand up for what we believe, no matter the odds or the consequences.
+								  When the mob and the press and the whole world tell you to move, your job is to plant yourself like a tree beside the river of truth, 
+								 and tell the whole world -- "No, YOU move."</p>
+							  <footer><a href="https://www.marvel.com/comics/issue/5245/amazing_spider-man_1999_537">-Captain America</a>Data provided by Marvel. © 2014 Marvel</footer>
+							</blockquote>
+						</li>
+						<li>
+							<blockquote>
+							  <p>"We're not just our failures. As much as they hurt, we learn from them. 
+								 Then we go out there and do our best to make up for them-- Even though we never will. We save people.
+								 We save as many as we can to make up for the ones we couldn't. That's all we do."</p>
+							  <footer><a href="https://www.marvel.com/comics/issue/55831/all-new_captain_america_special_2015_1">-Spider-Man</a>Data provided by Marvel. © 2014 Marvel</footer>
+							</blockquote>
+						</li>
+						<li>
+							<blockquote>
+							  <p>“I wish he'd told me not just of the power of kings, but of the might of the people.
+								   I wish he'd warned me that they, too, have secrets. 
+								  They, too, have mysteries. They, too, possess a power of their own.”</p>
+							  <footer><a href="https://www.marvel.com/comics/issue/57383/black_panther_2016_2">-Black Panther</a>Data provided by Marvel. © 2014 Marvel</footer>
+							</blockquote>
+						</li>
+						<li>
+							<blockquote>
+							  <p>"Excelsior!"</p>
+							  <footer><a href="">-Stan Lee</a> Data provided by Marvel. © 2014 Marvel</footer>
+							</blockquote>
+						</li>
+						<li>
+							<blockquote>
+							  <p>"I am Groot."</p>
+							  <footer><a href="https://www.marvel.com/comics/issue/53697/groot_2015_1">-Groot, Guardians of the Galaxy, Groot #1</a> Data provided by Marvel. © 2014 Marvel</footer>
+							</blockquote>
+						</li>
+					</ul>
+				</div><!-- /stack -->
+			</div><!-- /container -->
+		</div><!-- /main-->
+		<script src="js/draggabilly.pkgd.min.js"></script>
+		<script src="js/elastiStack.js"></script>
+		<script>
+			(function() {
+				var body = document.body,
+					titles = [].slice.call( document.querySelectorAll( '#stack-titles > li' ) ),
+					totalTitles = titles.length,
+					stack = new ElastiStack( document.getElementById( 'elasticstack' ), {
+						onUpdateStack : function( idx ) {
+							classie.remove( titles[idx === 0 ? totalTitles - 1 : idx - 1], 'current' );
+							classie.add( titles[idx], 'current' );
+						}
+					} ),
+					shapeEl = document.getElementById( 'morph-shape' ),
+					s = Snap( shapeEl.querySelector( 'svg' ) ),
+					pathEl = s.select( 'path' ),
+					paths = { 
+						reset : pathEl.attr( 'd' ),
+						next  : shapeEl.getAttribute( 'data-morph-next' )
+					};
+
+				document.getElementById( 'stack-next' ).addEventListener( 'mousedown', nextItem );
+				
+				function nextItem() {
+					classie.add( body, 'animating' );
+					classie.add( body, 'navigate-next' );
+					pathEl.stop().animate( { 'path' : paths.next }, 450, mina.easeinout, function() {
+						classie.remove( body, 'navigate-next' );
+						stack.nextItem( { transform : 'translate3d(0,-60px,400px)' } );
+						pathEl.stop().animate( { 'path' : paths.reset }, 100, mina.easeout, function() {
+							classie.remove( body, 'animating' );
+						} );
+					} );
+				}
+			})();
+		</script>
+	</body>
+</html>
